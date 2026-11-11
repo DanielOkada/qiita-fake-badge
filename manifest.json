@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Qiita Fake Badge",
+  "version": "0.3.0",
+  "description": "Qiitaのベルの赤丸の数字を、自分のブラウザの中だけで増やす。",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Qiita Fake Badge",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://qiita.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
